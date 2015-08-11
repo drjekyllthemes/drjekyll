@@ -33,19 +33,29 @@ logger = LogUtils::Logger.root
 opts   = Opts.new 
 
 
-program_desc 'drjekyll command line tool'
+program_desc 'jekyll command line tool .:. the missing static site package manager'
 version VERSION
 
 
-desc 'Use only local (offline) cached data; no (online) remote network access'
-switch [:l, :local], negatable: false
+## desc 'Use only local (offline) cached data; no (online) remote network access'
+## switch [:l, :local], negatable: false
 
 desc '(Debug) Show debug messages'
 switch [:verbose], negatable: false    ## todo: use -w for short form? check ruby interpreter if in use too?
 
-desc 'Only show warnings, errors and fatal messages'
-switch [:q, :quiet], negatable: false
+## desc 'Only show warnings, errors and fatal messages'
+## switch [:q, :quiet], negatable: false
 
+
+def self.fetch_catalog
+  ## themes_dir = "#{DrJekyll.root}/test/data"
+  ## catalog    = Catalog.new( "#{themes_dir}/themes.yml" )
+
+  url = "https://github.com/drjekyllthemes/themes/raw/master/o/themes.yml"
+
+  catalog = Catalog.from_url( url )
+  catalog
+end
 
 
 desc "List themes"
@@ -54,8 +64,7 @@ command [:list,:ls,:l] do |c|
 
   c.action do |g,o,args|
     ## read in themes diretory    
-    themes_dir = "#{DrJekyll.root}/test/data"
-    catalog    = Catalog.new( "#{themes_dir}/themes.yml" )
+    catalog = fetch_catalog
 
     cmd = ListCommand.new( catalog, opts )
     cmd.run( args )
@@ -65,14 +74,13 @@ end  # command list
 
 
 ## use get or fetch - why, why not??
-desc "Download theme; saved in ~/.drjekyll/cache"
+desc "(Debug) Step 1: Download theme; .zip archive saved in working folder (./)"
 arg_name 'NAME'   # required theme name
 command [:download,:dl,:d,:get,:g] do |c|
 
   c.action do |g,o,args|
     ## read in themes diretory    
-    themes_dir = "#{DrJekyll.root}/test/data"
-    catalog    = Catalog.new( "#{themes_dir}/themes.yml" )
+    catalog = fetch_catalog
 
     cmd = DownloadCommand.new( catalog, opts )
     cmd.run( args )
@@ -82,14 +90,13 @@ end  # command download
 
 
 ## use install or unzip/unpack - why, why not??
-desc "Setup (unzip/unpack) theme; use archive in ~/.drjekyll/cache"
+desc "(Debug) Step 2: Setup (unzip/unpack) theme; uses saved .zip archive in working folder (./)"
 arg_name 'NAME'   # required theme name
 command [:unpack,:pk,:p,:setup,:s] do |c|
 
   c.action do |g,o,args|
     ## read in themes diretory    
-    themes_dir = "#{DrJekyll.root}/test/data"
-    catalog    = Catalog.new( "#{themes_dir}/themes.yml" )
+    catalog = fetch_catalog
 
     cmd = UnzipCommand.new( catalog, opts )
     cmd.run( args )
@@ -103,12 +110,11 @@ arg_name 'NAME'   # required theme name
 command [:new,:n] do |c|
 
   c.action do |g,o,args|
+    ## read in themes diretory    
+    catalog = fetch_catalog
 
-    ## todo: required template name (defaults to starter for now)
-    name = args[0] || 'starter'
-
-    puts "  download theme here"
-    puts "  unzip/unpack (setup) here"
+    cmd = NewCommand.new( catalog, opts )
+    cmd.run( args )
     puts 'Done.'
   end # action
 end  # command setup

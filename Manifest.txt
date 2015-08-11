@@ -9,7 +9,9 @@ lib/drjekyll/catalog.rb
 lib/drjekyll/cli/download.rb
 lib/drjekyll/cli/list.rb
 lib/drjekyll/cli/main.rb
+lib/drjekyll/cli/new.rb
 lib/drjekyll/cli/opts.rb
 lib/drjekyll/cli/unzip.rb
+lib/drjekyll/package.rb
 lib/drjekyll/version.rb
 test/data/themes.yml

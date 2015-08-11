@@ -3,10 +3,25 @@
 module DrJekyll
 
 class Catalog
-  
-  def initialize( path )
+
+  def self.from_url( src )
+    worker = Fetcher::Worker.new
+    text = worker.read_utf8!( src )
+    self.from_string( text )
+  end
+
+  def self.from_file( path )
     ## read in themes catalog
-    text       = File.read( path )
+    text  = File.read( path )  ## fix: use File.read_utf8 ??
+    self.from_string( text )
+  end
+
+  def self.from_string( text )
+    self.new( text )
+  end
+
+
+  def initialize( text )
     @themes     = YAML.load( text )    
 
     ## auto-add keys for now (for quick testing)
@@ -70,7 +85,7 @@ class Catalog
     end
   end  # method filter
 
-  def get( key )   ## use fetch or different name - why? why not??
+  def find( key )   ## use fetch/get/? or different name - why? why not??
     ## find theme by key
     ##  fix/todo: use linear search for now; use hash lookup later
 

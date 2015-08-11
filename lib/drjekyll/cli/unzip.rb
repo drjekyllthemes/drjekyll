@@ -14,20 +14,21 @@ class UnzipCommand   ## find a better name - why, why not ??
     ## note: required template name (defaults to starter for now)
     key = args[0] || 'starter'
 
-    theme = @catalog.get( key )
-    
+    theme = @catalog.find( key )
+
     if theme
-      unzip( theme )
+      unzip( key, theme )
     else
       ## todo: issue warning - why, why not??
+      puts "*** theme '#{key}' not found; sorry"
     end
   end
 
-  def unzip( theme )
-    ## to be done
-    pp theme
+  def unzip( key, theme )
+    pak = Package.new( key, theme )
+    pak.unzip( "./#{key}" )
   end
-  
+
 end ## class UnzipCommand
 
 end # module DrJekyll

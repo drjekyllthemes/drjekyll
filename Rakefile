@@ -18,8 +18,12 @@ Hoe.spec 'drjekyll' do
   self.history_file = 'HISTORY.md'
 
   self.extra_deps = [
-    ## 3rd party
+    ['props', '>=1.1.2'],
+    ['logutils', '>=0.6.1'],
     ['fetcher', '>= 0.4.5'],
+    ## 3rd party
+    ['gli', '>=2.12.2'],
+    ['rubyzip', '>=1.1.7'],
   ]
 
   self.licenses = ['Public Domain']
