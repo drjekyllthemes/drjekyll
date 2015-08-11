@@ -1,0 +1,5 @@
+# ignore ruby rake generated folders
+
+pkg/
+doc/
+

@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'drjekyll'
+
+## todo: set x flag for file
+
+DrJekyll.main
