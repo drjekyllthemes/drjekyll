@@ -1,4 +1,4 @@
-# drjekyll - the missing theme package manager
+# drjekyll - the missing static site theme package manager
 
 jekyll command line tool
 
@@ -42,7 +42,7 @@ COMMANDS
     list, ls, l             - List themes
     new, n                  - Download 'n' setup (unzip/unpack) theme
     download, dl, d, get, g - (Debug) Step 1: Download theme; .zip archive saved in working folder (./)
-    unpack, pk, p, setup, s - (Debug) Step 2: Setup (unzip/unpack) theme; uses saved .zip archive in working folder (./)
+    unzip, setup, s         - (Debug) Step 2: Setup (unzip/unpack) theme; uses saved .zip archive in working folder (./)
     help                    - Shows a list of commands or help for one command
     test                    - (Debug) Test command suite
 ```
@@ -110,15 +110,15 @@ unzip the archive into the `./starter` folder.
 To download and install (unzip/unpack):
 
 ```
-  7..Poole's Lanyon (pooleslanyon) by Mark Otto - #poole 
+  7..Poole's Lanyon (lanyon | pooleslanyon) by Mark Otto - #poole 
 ```
 
 Use:
 
 ```
-$ drjekyll new pooleslanyon     # or
-$ drjekyll n pooleslanyon       # or
-$ drj      n pooleslanyon
+$ drjekyll new lanyon     # or
+$ drjekyll n lanyon       # or
+$ drj      n lanyon
 ```
 
 To download and install (unzip/unpack):
@@ -141,7 +141,7 @@ And so on and so forth.
 
 **More Themes**
 
-See the [Dr. Jekyll's Themes](https://drjekyllthemes.github.io) directory .
+See the [Dr. Jekyll's Themes](https://drjekyllthemes.github.io) directory.
 
 
 
