@@ -13,7 +13,6 @@ jekyll command line tool
 
 The drjekyll gem includes a command line tool that
 lets you manage static site theme packages.
-
 Try:
 
 ```
@@ -40,12 +39,11 @@ GLOBAL OPTIONS
 
 COMMANDS
     list, ls, l             - List themes
-    new, n                  - Download 'n' setup (unzip) theme
+    new, n                  - Download 'n' setup (unzip/unpack) theme
     help                    - Shows a list of commands or help for one command
 
     download, dl, d, get, g - (Debug) Step 1: Download theme; .zip archive saved in working folder (./)
-    unzip, setup, s         - (Debug) Step 2: Setup (unzip) theme; uses .zip archive in working folder (./)
-    test                    - (Debug) Test command suite
+    unzip, setup, s         - (Debug) Step 2: Setup (unzip/unpack) theme; uses .zip archive in working folder (./)
 ```
 
 
