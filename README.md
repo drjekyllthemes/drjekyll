@@ -49,8 +49,8 @@ COMMANDS
 
 ### Commands
 
-[List Themes (`list`, `ls`, `l`)](#list-themes-command---list-ls-l) • 
-[New Theme (`new`, `n`)](#new-theme-command---new-n)
+[List Themes](#list-themes-command---list-ls-l) • 
+[New Theme](#new-theme-command---new-n)
 
 
 #### List Themes Command - `list`, `ls`, `l`
