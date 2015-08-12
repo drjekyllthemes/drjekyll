@@ -48,7 +48,13 @@ COMMANDS
 ```
 
 
-### List Themes Command - `list`, `ls`, `l`
+### Commands
+
+[List Themes (`list`, `ls`, `l`)](#list-themes-command---list-ls-l) • 
+[New Theme (`new`, `n`)](#new-theme-command---new-n)
+
+
+#### List Themes Command - `list`, `ls`, `l`
 
 Use:
 
@@ -91,7 +97,7 @@ Resulting in:
 ```
 
 
-### New Theme Command - `new`, `n`
+#### New Theme Command - `new`, `n`
 
 To download and install (unzip/unpack) a theme archive use:
 
