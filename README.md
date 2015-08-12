@@ -25,7 +25,7 @@ Resulting in:
 
 ```
 NAME
-    drjekyll/drj - jekyll command line tool .:. the missing static site package manager
+    drjekyll/drj - jekyll command line tool .:. the missing static site theme package manager
 
 SYNOPSIS
     drjekyll/drj [global options] command [command options] [arguments...]
@@ -40,9 +40,9 @@ GLOBAL OPTIONS
 
 COMMANDS
     list, ls, l             - List themes
-    new, n                  - Download 'n' setup (unzip/unpack) theme
+    new, n                  - Download 'n' setup (unzip) theme
     download, dl, d, get, g - (Debug) Step 1: Download theme; .zip archive saved in working folder (./)
-    unzip, setup, s         - (Debug) Step 2: Setup (unzip/unpack) theme; uses saved .zip archive in working folder (./)
+    unzip, setup, s         - (Debug) Step 2: Setup (unzip) theme; uses .zip archive in working folder (./)
     help                    - Shows a list of commands or help for one command
     test                    - (Debug) Test command suite
 ```
