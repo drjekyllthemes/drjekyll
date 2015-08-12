@@ -1,4 +1,4 @@
-# drjekyll - the missing static site theme package manager
+# drj/drjekyll - the missing static site theme package manager
 
 jekyll command line tool
 
