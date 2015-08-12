@@ -41,9 +41,10 @@ GLOBAL OPTIONS
 COMMANDS
     list, ls, l             - List themes
     new, n                  - Download 'n' setup (unzip) theme
+    help                    - Shows a list of commands or help for one command
+
     download, dl, d, get, g - (Debug) Step 1: Download theme; .zip archive saved in working folder (./)
     unzip, setup, s         - (Debug) Step 2: Setup (unzip) theme; uses .zip archive in working folder (./)
-    help                    - Shows a list of commands or help for one command
     test                    - (Debug) Test command suite
 ```
 
