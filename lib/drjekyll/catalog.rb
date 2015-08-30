@@ -22,7 +22,8 @@ class Catalog
 
 
   def initialize( text )
-    @themes     = YAML.load( text )    
+    ## convert to "internal" inverted format (resolve shortcuts etc.)
+    @themes = convert( YAML.load( text ) )
 
     ## auto-add keys for now (for quick testing)
     @themes.each do |k,h|
@@ -49,6 +50,31 @@ class Catalog
       end
     end
   end
+
+  def convert( themes )
+    ## see scripts in drjekyllthemes/build repo
+    ##   todo/fix: use this class/code here in build script too - do NOT duplicate
+    
+    ## build hash with themes by title 
+    hash = {}
+
+    themes.each do |theme|
+      title = theme.delete( 'title' )  ## remove title from hash and use as new key
+  
+      ## unify
+      ##  check for github shortcut
+      github = theme.delete( 'github' )
+      if github
+        theme[ 'home_url' ] = "https://github.com/#{github}"
+        branch = theme.delete( 'branch' )
+        branch = 'master'  if branch.nil?   ## if no branch listed assume master
+        theme[ 'download_url' ] = "https://github.com/#{github}/archive/#{branch}.zip"
+      end
+      hash[ title ] = theme
+    end
+    hash
+  end  # method convert
+
 
   def list( filter=nil )
     ## pp filter

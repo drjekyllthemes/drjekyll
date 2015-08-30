@@ -26,6 +26,10 @@ class DownloadCommand   ## find a better name - why, why not ??
 
   def download( key, theme )
     pak = Package.new( key, theme )
+    
+    ## todo/fix:
+    ##   add puts "GET URL" w/ color (bright/bold green)
+    
     pak.download
   end
 

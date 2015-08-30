@@ -15,3 +15,5 @@ lib/drjekyll/cli/unzip.rb
 lib/drjekyll/package.rb
 lib/drjekyll/version.rb
 test/data/themes.yml
+test/helper.rb
+test/test_catalog.rb

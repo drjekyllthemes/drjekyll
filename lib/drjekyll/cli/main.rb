@@ -51,7 +51,9 @@ def self.fetch_catalog
   ## themes_dir = "#{DrJekyll.root}/test/data"
   ## catalog    = Catalog.new( "#{themes_dir}/themes.yml" )
 
-  url = "https://github.com/drjekyllthemes/themes/raw/master/o/themes.yml"
+  url = "https://github.com/drjekyllthemes/themes/raw/master/themes.yml"
+
+  puts "GET #{url}"     ## todo/fix: add color (bright/bold green)
 
   catalog = Catalog.from_url( url )
   catalog
