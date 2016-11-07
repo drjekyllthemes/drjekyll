@@ -39,7 +39,7 @@ class Catalog
         if slug == 'henryshellojekyll'
           keys << 'hello'
           keys << 'hellojekyll'
-        if slug == 'henrysstarterminimal' || slug == 'henrysstarter'
+        elsif slug == 'henrysstarterminimal' || slug == 'henrysstarter'
           keys << 'starter'
         elsif slug == 'henrysminimal'
           keys << 'minimial'
