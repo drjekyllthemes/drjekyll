@@ -35,14 +35,22 @@ class Catalog
         slug = name.downcase.gsub( /[^a-z0-9]/, '' )
 
         ## for quick testing add some shortcuts
-        if slug == 'planetjekyllsstarterminimal'
+        ##  -- add Henry's Hello, Minima! (henryshellominima) too - why? why not?
+        if slug == 'henryshellojekyll'
+          keys << 'hello'
+          keys << 'hellojekyll'
+        if slug == 'henrysstarterminimal' || slug == 'henrysstarter'
           keys << 'starter'
-        elsif slug == 'drjekyllsminimal'
+        elsif slug == 'henrysminimal'
           keys << 'minimial'
-        elsif slug == 'drjekyllsbootstrap'
+        elsif slug == 'henrysbootstrap'
           keys << 'bootstrap'
-        elsif slug == 'drjekyllsclassicsbook'
+        elsif slug == 'henrysclassicsbook'
           keys << 'classics'
+        elsif slug == 'pooleshyde'
+          keys << 'hyde'
+        elsif slug == 'pooleslanyon'
+          keys << 'lanyon'
         else
         end
         keys << slug
@@ -51,16 +59,17 @@ class Catalog
     end
   end
 
+
   def convert( themes )
     ## see scripts in drjekyllthemes/build repo
     ##   todo/fix: use this class/code here in build script too - do NOT duplicate
-    
-    ## build hash with themes by title 
+
+    ## build hash with themes by title
     hash = {}
 
     themes.each do |theme|
       title = theme.delete( 'title' )  ## remove title from hash and use as new key
-  
+
       ## unify
       ##  check for github shortcut
       github = theme.delete( 'github' )
@@ -130,11 +139,10 @@ class Catalog
         break
       end
     end
-  
+
     theme
   end
-  
+
 end # class Catalog
 
 end # module DrJekyll
-

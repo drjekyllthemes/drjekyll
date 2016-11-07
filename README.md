@@ -30,7 +30,7 @@ SYNOPSIS
     drjekyll/drj [global options] command [command options] [arguments...]
 
 VERSION
-    0.1.0
+    1.0.0
 
 GLOBAL OPTIONS
     --help    - Show this message
@@ -49,7 +49,7 @@ COMMANDS
 
 ### Commands
 
-[List Themes](#list-themes-command---list-ls-l) • 
+[List Themes](#list-themes-command---list-ls-l) •
 [New Theme](#new-theme-command---new-n)
 
 
@@ -67,14 +67,15 @@ $ drj l
 Resulting in:
 
 ```
-  1..Planet Jekyll's Starter (Minimal) (starter | planetjekyllsstarterminimal) by Gerald Bauer - #white 
-  2..Dr Jekyll's Minimal (minimial | drjekyllsminimal) by Gerald Bauer - #white 
-  3..Dr Jekyll's Bootstrap (bootstrap | drjekyllsbootstrap) by Gerald Bauer - #bootstrap #scss #white 
-  4..Dr Jekyll's Classics Book (classics | drjekyllsclassicsbook) by Gerald Bauer - #books #white 
-  5..Poole (poole) by Mark Otto - #poole 
-  6..Poole's Hyde (pooleshyde) by Mark Otto - #poole 
-  7..Poole's Lanyon (pooleslanyon) by Mark Otto - #poole 
-  8..Beautiful Jekyll (beautifuljekyll) by Dean Attali
+  1..Henry's Hello, Jekyll! (hello | hellojekyll | henryshellojekyll) by Gerald Bauer - #white #starter
+  2..Henry's Starter (starter | henrysstarter) by Gerald Bauer - #white #starter
+  3..Henry's Minimal (minimial | henrysminimal) by Gerald Bauer - #white #minimal #starter
+  4..Henry's Bootstrap (bootstrap | henrysbootstrap) by Gerald Bauer - #bootstrap #scss #white #starter
+  5..Henry's Classics Book (classics | henrysclassicsbook) by Gerald Bauer - #books #white
+  6..Poole (poole) by Mark Otto - #poole
+  7..Poole's Hyde (hyde | pooleshyde) by Mark Otto - #poole
+  8..Poole's Lanyon (lanyon | pooleslanyon) by Mark Otto - #poole
+  9..Beautiful Jekyll (beautifuljekyll) by Dean Attali
 ...
 ```
 
@@ -91,8 +92,8 @@ Resulting in:
 
 ```
  68..Resume Cards (resumecards) by Elle Kasai - #resume
-104..iCard Resume (icardresume) by Dong Liang - #resume 
-109..Resume (resume) by Joel Glovier - #resume 
+104..iCard Resume (icardresume) by Dong Liang - #resume
+109..Resume (resume) by Joel Glovier - #resume
 ```
 
 
@@ -115,7 +116,7 @@ unzip the archive into the `./starter` folder.
 To download and install (unzip/unpack):
 
 ```
-  7..Poole's Lanyon (lanyon | pooleslanyon) by Mark Otto - #poole 
+  7..Poole's Lanyon (lanyon | pooleslanyon) by Mark Otto - #poole
 ```
 
 Use:
@@ -171,4 +172,3 @@ Use it as you please with no restrictions whatsoever.
 
 Send them along to the [wwwmake forum](http://groups.google.com/group/wwwmake).
 Thanks!
-

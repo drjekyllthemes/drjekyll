@@ -5,6 +5,15 @@ module DrJekyll
 class Package
 
   def initialize( key, hash )  ## note: for now pass in key as its own arg (not part/included in hash)
+
+    ##  fix/todo: change key to name - why? why not?
+    ##     always downcase key - why? why not?
+    ##     convert github e.g owner/repo to ownner--I--repo -- why? why not?
+    ##   do NOT pass in hash - just pass in download_url
+    ##
+    ##  add self.from_github ???  builder/ctor - why? why not?
+    ##  add self.from_hash  ??? builder/ctor - why? why not?
+
     @key  = key
     @hash = hash
 
@@ -41,7 +50,7 @@ class Package
   def unzip( unzip_dir )
     src        = local_zip_path
     dest_unzip = unzip_dir ## local_unzip_dir
-    
+
     ## check if folders exists? if not create folder in path
     FileUtils.mkdir_p( dest_unzip ) unless Dir.exists?( dest_unzip )
     unzip_theme( src, dest_unzip )
@@ -84,4 +93,3 @@ private
 end # class Package
 
 end # module DrJekyll
-
