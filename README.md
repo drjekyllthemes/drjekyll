@@ -1,4 +1,4 @@
-# drj/drjekyll - the missing static site theme package manager
+# drj/drjekyll - the missing static website theme package manager
 
 jekyll command line tool
 
@@ -12,7 +12,7 @@ jekyll command line tool
 ## Usage
 
 The drjekyll gem includes a command line tool that
-lets you manage static site theme packages.
+lets you manage static website theme packages.
 Try:
 
 ```
@@ -24,7 +24,7 @@ Resulting in:
 
 ```
 NAME
-    drjekyll/drj - jekyll command line tool .:. the missing static site theme package manager
+    drjekyll/drj - jekyll command line tool .:. the missing static website theme package manager
 
 SYNOPSIS
     drjekyll/drj [global options] command [command options] [arguments...]
